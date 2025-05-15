@@ -8,7 +8,7 @@
 function convertToObject(sourceString) {
   const styleLines = sourceString.split(';');
   const filtredStyleLines = styleLines.filter((styleLine) => {
-    return styleLine.trim() !== '';
+    return styleLine.trim() !== '' && styleLine.includes(':');
   });
 
   return filtredStyleLines.reduce((acc, line) => {
